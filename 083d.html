@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Home Simulation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #87ceeb;
+            /* Sky blue background */
+            font-family: Arial, sans-serif;
+        }
+
+        .home {
+            width: 200px;
+            height: 150px;
+            background: #f8f8f8;
+            border: 2px solid #333;
+            position: relative;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+        }
+
+        .room {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #f0f0f0;
+            border: 2px solid #333;
+            transform: rotateY(0deg);
+            transition: transform 0.5s;
+        }
+
+        .room.active {
+            transform: rotateY(180deg);
+        }
+
+        .light,
+        .fan,
+        .cooler {
+            width: 30px;
+            height: 30px;
+            background: #ffcc00;
+            border: 2px solid #333;
+            border-radius: 5px;
+            position: absolute;
+            top: 10px;
+        }
+
+        .fan {
+            background: #ff9900;
+        }
+
+        .cooler {
+            background: #0099ff;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        #controls {
+            position: absolute;
+            bottom: -70px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="home">
+        <div class="room" id="room">
+            <div class="light" id="light"></div>
+            <div class="fan" id="fan"></div>
+            <div class="cooler" id="cooler"></div>
+        </div>
+    </div>
+
+    <div id="controls">
+        <button id="toggleLight">Toggle Light</button>
+        <button id="toggleFan">Toggle Fan</button>
+        <button id="toggleCooler">Toggle Cooler</button>
+    </div>
+
+    <script>
+        const light = document.getElementById('light');
+        const fan = document.getElementById('fan');
+        const cooler = document.getElementById('cooler');
+
+        let lightOn = false;
+        let fanOn = false;
+        let coolerOn = false;
+
+        document.getElementById('toggleLight').onclick = function () {
+            lightOn = !lightOn;
+            light.style.background = lightOn ? '#ffff00' : '#ffcc00';
+        };
+
+        document.getElementById('toggleFan').onclick = function () {
+            fanOn = !fanOn;
+            fan.style.background = fanOn ? '#ffcc00' : '#ff9900';
+        };
+
+        document.getElementById('toggleCooler').onclick = function () {
+            coolerOn = !coolerOn;
+            cooler.style.background = coolerOn ? '#00ccff' : '#0099ff';
+        };
+    </script>
+
+</body>
+
+</html>

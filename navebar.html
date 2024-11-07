@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danger Navbar</title>
+    <style>
+        body {
+            background-color: #0e0e0e;
+            color: #f0f0f0;
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border-bottom: 2px solid #ff0000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #f0f0f0;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-links li a:hover {
+            background-color: #ff0000;
+            color: #0e0e0e;
+        }
+
+        .danger {
+            background-color: #ff0000;
+            color: #0e0e0e;
+            font-weight: bold;
+            border: 2px solid #f0f0f0;
+        }
+
+        .danger:hover {
+            background-color: #d40000;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">HACKER ZONE</div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Targets</a></li>
+            <li><a href="#">Tools</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#" class="danger">Breach Alert</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>

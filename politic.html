@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Political Awareness</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff5722;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 20px;
+            flex: 1 0 30%;
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 0 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Political Awareness</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#issues">Political Issues</a></li>
+                <li><a href="#stories">Case Studies</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Hum yahaan aam janta ko rajneetik samasyaon ke baare mein jaankari dene ke liye hain, taaki wo samajh
+                sakein ki kaise unhe bewakuf banaya ja raha hai.</p>
+        </section>
+
+        <section id="issues">
+            <h2>Political Issues</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Issue 1: Corruption</h3>
+                    <p>Rajneeti mein bhrashtachar kaise aam janta ko prabhavit karta hai, aur isse kaise nipta ja sakta
+                        hai.</p>
+                </div>
+                <div class="card">
+                    <h3>Issue 2: Misinformation</h3>
+                    <p>Kaise jhooti khabrein aur misinformation aam janta ko behka rahi hain.</p>
+                </div>
+                <div class="card">
+                    <h3>Issue 3: Unemployment</h3>
+                    <p>Rojgaar ki kami aur iske samadhan par vichar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="stories">
+            <h2>Case Studies</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>Case Study 1</h3>
+                    <p>Aam janta ki kahani jo rajneetik galtiyon ka shikaar hui.</p>
+                </div>
+                <div class="card">
+                    <h3>Case Study 2</h3>
+                    <p>Kaise ek chhoti si samasya ne bada parivartan la diya.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Political Awareness. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

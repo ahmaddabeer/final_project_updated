@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sparkle Button</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb, #8ec5fc, #b2fefa);
+    background-size: 400% 400%;
+    animation: backgroundShift 8s infinite ease-in-out;
+  }
+
+  .sparkle-button {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+  }
+
+  .sparkle-button:hover {
+    background-color: #2980b9;
+  }
+
+  .sparkle-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 20%, rgba(255, 255, 255, 0) 80%),
+                radial-gradient(circle, rgba(255, 0, 150, 0.2) 15%, rgba(255, 255, 255, 0) 70%),
+                radial-gradient(circle, rgba(0, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0) 60%);
+    transform: translate(-50%, -50%) rotate(0deg);
+    filter: blur(10px);
+    opacity: 0.6;
+    animation: sparkle 2s infinite linear;
+    z-index: -1;
+  }
+
+  @keyframes sparkle {
+    0% {
+      transform: translate(-50%, -50%) rotate(0deg);
+      opacity: 0.6;
+    }
+    25% {
+      opacity: 0.8;
+      filter: hue-rotate(45deg);
+    }
+    50% {
+      opacity: 1;
+      filter: hue-rotate(90deg);
+    }
+    75% {
+      opacity: 0.8;
+      filter: hue-rotate(135deg);
+    }
+    100% {
+      transform: translate(-50%, -50%) rotate(360deg);
+      opacity: 0.6;
+      filter: hue-rotate(180deg);
+    }
+  }
+
+  /* Background Color Shift Animation */
+  @keyframes backgroundShift {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a href="#" class="sparkle-button">Click Me</a>
+
+</body>
+</html>

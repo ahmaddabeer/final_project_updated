@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Achi Baaten</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: relative;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        section {
+            margin-bottom: 40px;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 15px;
+            padding: 20px;
+            flex: 1 0 30%;
+            /* Flex grow, shrink, and basis */
+            transition: transform 0.2s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 0 100%;
+                /* Full width on small screens */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Achi Baaten</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#stories">Stories</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Us</h2>
+            <p>Hum yahan un logon ki kahaniyan share karte hain jo apni galtiyon se seekhte hain aur achha banne ki
+                koshish karte hain.</p>
+        </section>
+
+        <section id="stories">
+            <h2>User Stories</h2>
+            <div class="card-container">
+                <div class="card">
+                    <h3>User 1</h3>
+                    <p>Yahaan par user ki kahani likhi jaayegi. Unhone apni galtiyon se kya seekha, yahaan share karein.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>User 2</h3>
+                    <p>Yahaan par user ki kahani likhi jaayegi. Unhone kaise apne aapko sudhara, yahaan share karein.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>User 3</h3>
+                    <p>Yahaan par user ki kahani likhi jaayegi. Unhone kaise apni life ko badla, yahaan share karein.
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2024 Achi Baaten. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

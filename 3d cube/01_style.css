@@ -1,0 +1,64 @@
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.cube {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    transform-style: preserve-3d;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+.face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Individual face colors */
+.front { background-color: #ff4c4c; transform: translateZ(50px); }
+.back { background-color: #4cff4c; transform: rotateY(180deg) translateZ(50px); }
+.left { background-color: #4c4cff; transform: rotateY(-90deg) translateZ(50px); }
+.right { background-color: #ffff4c; transform: rotateY(90deg) translateZ(50px); }
+.top { background-color: #ff4cff; transform: rotateX(90deg) translateZ(50px); }
+.bottom { background-color: #4cffff; transform: rotateX(-90deg) translateZ(50px); }
+
+/* Left Cube Animation */
+.left-cube {
+    animation: leftCubeAnimation 4s infinite linear;
+}
+
+/* Right Cube Animation */
+.right-cube {
+    animation: rightCubeAnimation 4s infinite linear;
+}
+
+@keyframes leftCubeAnimation {
+    0% { transform: translateX(-200px) rotateY(0deg); }
+    50% { transform: translateX(0px) rotateY(180deg); } /* Center Collision */
+    100% { transform: translateX(-200px) rotateY(360deg); } /* Move back */
+}
+
+@keyframes rightCubeAnimation {
+    0% { transform: translateX(200px) rotateY(0deg); }
+    50% { transform: translateX(0px) rotateY(-180deg); } /* Center Collision */
+    100% { transform: translateX(200px) rotateY(-360deg); } /* Move back */
+}

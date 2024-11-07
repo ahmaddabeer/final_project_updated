@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blood Themed Navbar</title>
+    <style>
+        body {
+            background-color: #0e0e0e;
+            color: #f0f0f0;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background-color: #2a2a2a;
+            border-bottom: 4px solid #ff0000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #ff0000;
+            display: flex;
+            align-items: center;
+        }
+
+        .danger-image {
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links li a {
+            text-decoration: none;
+            color: #f0f0f0;
+            padding: 12px 18px;
+            border-radius: 5px;
+            transition: background 0.3s, color 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-links li a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 0, 0, 0.3);
+            top: 0;
+            left: -100%;
+            transition: left 0.3s;
+            z-index: 0;
+        }
+
+        .nav-links li a:hover::after {
+            left: 0;
+        }
+
+        .nav-links li a:hover {
+            color: #0e0e0e;
+        }
+
+        .danger {
+            background-color: #ff0000;
+            color: #0e0e0e;
+            font-weight: bold;
+            border: 2px solid #f0f0f0;
+        }
+
+        .danger:hover {
+            background-color: #d40000;
+        }
+
+        .search-bar {
+            display: flex;
+            align-items: center;
+        }
+
+        .search-input {
+            padding: 10px;
+            border: 2px solid #ff0000;
+            border-radius: 5px;
+            background-color: #1a1a1a;
+            color: #f0f0f0;
+        }
+
+        .search-button {
+            padding: 10px 15px;
+            border: 2px solid #ff0000;
+            background-color: #ff0000;
+            color: #0e0e0e;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 5px;
+            transition: background 0.3s;
+        }
+
+        .search-button:hover {
+            background-color: #d40000;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="https://via.placeholder.com/40/ff0000/FFFFFF/?text=!" alt="Danger Icon" class="danger-image">
+            HACKER ZONE
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Targets</a></li>
+            <li><a href="#">Tools</a></li>
+            <li><a href="#">Reports</a></li>
+            <li><a href="#" class="danger">Breach Alert</a></li>
+        </ul>
+        <div class="search-bar">
+            <input type="text" class="search-input" placeholder="Search...">
+            <button class="search-button">Search</button>
+        </div>
+    </nav>
+</body>
+
+</html>

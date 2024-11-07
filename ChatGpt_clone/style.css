@@ -1,0 +1,31 @@
+/* Navbar styling */
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #202123;
+    color: #ffffff;
+}
+
+#opt {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.left-buttons,
+.right-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+button img {
+    width: 24px;
+    height: 24px;
+}

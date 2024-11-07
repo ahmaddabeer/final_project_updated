@@ -1,0 +1,181 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danger Search</title>
+    <style>
+        body {
+            background-color: #000;
+            color: #ff0000;
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
+
+        .search-container {
+            position: absolute;
+            top: 20%;
+            text-align: center;
+        }
+
+        .search-bar {
+            padding: 15px;
+            border: 2px solid #ff0000;
+            border-radius: 5px;
+            background-color: #1a1a1a;
+            color: #ff0000;
+            font-size: 20px;
+        }
+
+        .search-button {
+            padding: 15px 20px;
+            border: 2px solid #ff0000;
+            background-color: #ff0000;
+            color: #000;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+            font-size: 20px;
+            transition: background 0.3s;
+        }
+
+        .search-button:hover {
+            background-color: #d40000;
+        }
+
+        .results {
+            position: absolute;
+            right: 10%;
+            top: 20%;
+            width: 30%;
+            height: 60%;
+            background-color: rgba(0, 0, 0, 0.7);
+            border: 2px solid #ff0000;
+            padding: 20px;
+            border-radius: 10px;
+            overflow-y: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="search-container">
+        <input type="text" id="searchInput" class="search-bar" placeholder="Search...">
+        <button class="search-button" onclick="performSearch()">Search</button>
+    </div>
+
+    <div class="results" id="results">
+        <h2>Search Results:</h2>
+        <div id="resultContent"></div>
+    </div>
+
+    <script>
+        function performSearch() {
+            const input = document.getElementById('searchInput').value;
+            const resultContent = document.getElementById('resultContent');
+
+            // Simulating search results
+            resultContent.innerHTML = `<p>Searching for: <strong>${input}</strong></p>`;
+            resultContent.innerHTML += '<p>Result 1: Hack the Planet</p>';
+            resultContent.innerHTML += '<p>Result 2: Advanced AI Techniques</p>';
+            resultContent.innerHTML += '<p>Result 3: Cybersecurity Essentials</p>';
+        }
+    </script>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji GPT Interface</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .input-container {
+            margin-bottom: 20px;
+        }
+
+        .emoji-input {
+            padding: 10px;
+            font-size: 24px;
+            border: 2px solid #00ff00;
+            border-radius: 5px;
+            background-color: #1a1a1a;
+            color: #00ff00;
+        }
+
+        .submit-button {
+            padding: 10px 20px;
+            background-color: #00ff00;
+            border: none;
+            border-radius: 5px;
+            color: #000;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background 0.3s;
+        }
+
+        .submit-button:hover {
+            background-color: #d4d400;
+        }
+
+        .output {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #1a1a1a;
+            border: 2px solid #00ff00;
+            border-radius: 10px;
+            width: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>GPT Emoji Interface</h1>
+    <div class="input-container">
+        <input type="text" id="emojiInput" class="emoji-input" placeholder="Enter Emoji...">
+        <button class="submit-button" onclick="sendToGPT()">Submit</button>
+    </div>
+    <div class="output" id="output"></div>
+
+    <script>
+        async function sendToGPT() {
+            const input = document.getElementById('emojiInput').value;
+            const output = document.getElementById('output');
+
+            // Simulating API request to GPT
+            // Replace with actual API call
+            output.innerHTML = 'Processing...';
+
+            // Simulate delay for API response
+            setTimeout(() => {
+                output.innerHTML = `You entered: ${input}`;
+                // Here you would handle the actual response from GPT API
+            }, 2000);
+        }
+    </script>
+</body>
+
+</html>
